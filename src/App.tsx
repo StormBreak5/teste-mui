@@ -1,16 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import logo from "./logo.svg";
+import { CssBaseline } from "@mui/material";
+import { Routes, useRoutes } from "react-router-dom";
 import "./App.css";
-import LoginPage from "./content/pages/Login";
+import Header from "./components/Header";
+import routes from "./router";
 
 function App() {
+  const content = useRoutes(routes);
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Header />
+      <CssBaseline />
+      {content}
+    </div>
   );
 }
 

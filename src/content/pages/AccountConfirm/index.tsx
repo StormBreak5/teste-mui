@@ -1,14 +1,11 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import { Helmet } from "react-helmet-async";
 import { MdEmail } from "react-icons/md";
 import Controls from "../../../components/Controls/Controls";
 
 export default function AccountConfirm() {
   return (
     <>
-      <Helmet>
-        <title>E-mail de ativação enviado</title>
-      </Helmet>
+      <title>E-mail de ativação enviado</title>
       <Container>
         <Grid
           container

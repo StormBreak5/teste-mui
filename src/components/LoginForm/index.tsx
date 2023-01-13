@@ -6,15 +6,15 @@ import {
   Grid,
   TextField,
   Typography,
-  Link
-} from '@mui/material';
-import Controls from '../Controls/Controls';
-import { Form, useForm } from '../../hooks/useForm';
+  Link,
+} from "@mui/material";
+import Controls from "../Controls/Controls";
+import { Form, useForm } from "../../hooks/useForm";
 
 const initialValues = {
-  nameEmail: '',
-  password: '',
-  remember: false
+  nameEmail: "",
+  password: "",
+  remember: false,
 };
 
 export default function LoginForm() {
@@ -27,9 +27,9 @@ export default function LoginForm() {
           <Grid
             container
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center'
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
             <Grid item sx={{ mb: 1 }}>
@@ -40,9 +40,7 @@ export default function LoginForm() {
                 />
                 <Divider /> */}
                 <Box
-                  component="form"
-                  autoComplete="on"
-                  sx={{ '& .MuiTextField-root': { width: '40ch' }, padding: 1 }}
+                  sx={{ "& .MuiTextField-root": { width: "40ch" }, padding: 1 }}
                 >
                   <div>
                     <TextField
@@ -79,8 +77,8 @@ export default function LoginForm() {
                   </Box>
                 </Box>
                 <Divider />
-                <Box sx={{ display: 'flex', justifyContent: 'center', m: 1 }}>
-                  <Controls.Button text="Cadastrar" />
+                <Box sx={{ display: "flex", justifyContent: "center", m: 1 }}>
+                  <Controls.Button text="Entrar" />
                 </Box>
               </Card>
             </Grid>
@@ -90,7 +88,7 @@ export default function LoginForm() {
                 display="block"
                 gutterBottom
                 align="center"
-                sx={{ textTransform: 'none', mb: 0 }}
+                sx={{ textTransform: "none", mb: 0 }}
               >
                 Não lembra seus dados?
               </Typography>
@@ -98,9 +96,17 @@ export default function LoginForm() {
                 align="center"
                 display="block"
                 href="/password-recovery"
-                sx={{ mt: 0 }}
+                sx={{ mt: 0, fontSize: 16 }}
               >
-                Clique aqui
+                <Typography
+                  variant="caption"
+                  display="block"
+                  gutterBottom
+                  align="center"
+                  sx={{ textTransform: "none", mb: 0 }}
+                >
+                  Clique aqui
+                </Typography>
               </Link>
             </Box>
           </Grid>

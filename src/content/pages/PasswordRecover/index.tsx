@@ -7,7 +7,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { Helmet } from "react-helmet-async";
+
 import Controls from "../../../components/Controls/Controls";
 import { Form, useForm } from "../../../hooks/useForm";
 
@@ -18,11 +18,15 @@ const initialValues = {
 export default function PasswordRecover() {
   const { values, setValues, handleInputChange } = useForm(initialValues);
 
+  const sendMail = () => {
+    // eslint-disable-next-line no-restricted-globals
+    location.href = "/password-recovery/mail-sent";
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Recuperar senha</title>
-      </Helmet>
+      <title>Recuperar senha</title>
+
       <Container maxWidth="sm">
         <Grid
           container
@@ -32,15 +36,13 @@ export default function PasswordRecover() {
           justifyContent="center"
           style={{ minHeight: "100vh" }}
         >
-          <Typography variant="h1" sx={{ mb: 2 }}>
+          <Typography variant="h1" sx={{ mb: 2, fontSize: "3rem" }}>
             Vamos recuperar sua senha!
           </Typography>
           <Grid item>
             <Card>
               <Form>
                 <Box
-                  component="form"
-                  autoComplete="on"
                   sx={{
                     "& .MuiTextField-root": { m: 1, width: "60ch" },
                   }}
@@ -71,7 +73,7 @@ export default function PasswordRecover() {
 
                 <Divider />
                 <Box sx={{ display: "flex", justifyContent: "center", m: 1 }}>
-                  <Controls.Button text="Recuperar senha" />
+                  <Controls.Button onClick={sendMail} text="Recuperar senha" />
                 </Box>
               </Form>
             </Card>
@@ -85,16 +87,6 @@ export default function PasswordRecover() {
             sx={{ textTransform: "none", mt: 1 }}
           >
             E-mail inválido
-          </Typography>
-          <Typography
-            variant="caption"
-            display="block"
-            gutterBottom
-            align="center"
-            color="green"
-            sx={{ textTransform: "none", mt: 1 }}
-          >
-            Um e-mail com as instruções de recuperação foi enviado
           </Typography>
         </Grid>
       </Container>

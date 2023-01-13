@@ -1,13 +1,11 @@
 import { Grid, Typography } from "@mui/material";
-import { Helmet } from "react-helmet-async";
+
 import UserForm from "../../../components/UserForm";
 
 export default function RegisterPage() {
   return (
     <>
-      <Helmet>
-        <title>Cadastro de Usuário</title>
-      </Helmet>
+      <title>Cadastro de Usuário</title>
       <Grid
         container
         spacing={0}

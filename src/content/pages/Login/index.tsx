@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 
-import { Helmet } from "react-helmet-async";
 import LoginForm from "../../../components/LoginForm";
 
 export default function LoginPage() {
@@ -8,9 +7,10 @@ export default function LoginPage() {
 
   return (
     <>
-      <Helmet>
+      <header>
         <title>Login</title>
-      </Helmet>
+      </header>
+
       <Grid
         container
         spacing={0}
@@ -19,7 +19,7 @@ export default function LoginPage() {
         justifyContent="center"
         style={{ minHeight: "100vh" }}
       >
-        <Typography variant="h1" sx={{ mb: 2 }}>
+        <Typography variant="h1" sx={{ mb: 2, fontSize: "3rem" }}>
           Faça seu Login
         </Typography>
         <Grid item xs={3}>

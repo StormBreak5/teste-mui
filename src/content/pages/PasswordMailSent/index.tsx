@@ -1,14 +1,12 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import { Helmet } from "react-helmet-async";
+
 import { FcCheckmark } from "react-icons/fc";
 import Controls from "../../../components/Controls/Controls";
 
 export default function PasswordMailSent() {
   return (
     <>
-      <Helmet>
-        <title>E-mail enviado</title>
-      </Helmet>
+      <title>E-mail enviado</title>
       <Container>
         <Grid
           container
