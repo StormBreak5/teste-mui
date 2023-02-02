@@ -5,14 +5,7 @@ import { MdEmail, MdLock } from "react-icons/md";
 export default function SecurityInfo() {
   return (
     <Grid container display="flex">
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="stretch"
-        spacing={0}
-        sx={{ mb: 2 }}
-      >
+      <Grid container direction="row" justifyContent="center" sx={{ mb: 2 }}>
         <Grid item xs={12} md={12} display="flex" alignItems="center">
           <MdEmail size={20} color="#344767" />
           <Typography

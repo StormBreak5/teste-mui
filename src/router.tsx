@@ -5,6 +5,7 @@ import Home from "./content/pages/Home";
 import LoginPage from "./content/pages/Login";
 import PasswordMailSent from "./content/pages/PasswordMailSent";
 import PasswordRecover from "./content/pages/PasswordRecover";
+import Plans from "./content/pages/Plans";
 import Profile from "./content/pages/Profile";
 import RegisterPage from "./content/pages/Register";
 
@@ -36,6 +37,10 @@ const routes: RouteObject[] = [
   {
     path: "profile",
     element: <Profile />,
+  },
+  {
+    path: "plans",
+    element: <Plans />,
   },
 ];
 
